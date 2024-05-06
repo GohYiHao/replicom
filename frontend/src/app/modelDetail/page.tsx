@@ -194,7 +194,27 @@ export default function ModelDetails() {
           </div>
         );
       }
-      return <pre>{JSON.stringify(output, null, 2)}</pre>; // JSON formatting for objects
+      return (
+        <div className="object-container">
+          <div className="space-y-4">
+            {Object.entries(output).map(([key, value], index) => (
+              <div key={index} className="flex flex-col">
+                <div className="font-bold">{key}:</div>
+                <div
+                  className={`mt-1 ${(value?.toString() || "").length > 110
+                    ? "max-h-36 overflow-auto bg-gray-300 dark:bg-gray-500 p-2"
+                    : ""
+                    }`}
+                >
+                  {typeof value === "object"
+                    ? renderOutput(value)
+                    : value?.toString()}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
     } else {
       return <span>{output}</span>;
     }
