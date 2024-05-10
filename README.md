@@ -61,3 +61,4 @@ Run AI with an API. Run and fine-tune open-source models.  All with one line of 
     python manage.py run server
    ```
 # How to run
+![image](https://github.com/GohYiHao/replicom/assets/153108882/0bc7cf5f-21d1-4db9-b376-4f3d1d0d0909)
