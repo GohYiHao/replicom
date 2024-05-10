@@ -57,7 +57,7 @@ Run AI with an API. Run and fine-tune open-source models.  All with one line of 
    ```
     
 
-    ```bash
+   ```bash
     python manage.py run server
-    ```
+   ```
 
