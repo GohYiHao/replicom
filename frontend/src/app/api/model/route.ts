@@ -56,7 +56,6 @@ export async function POST(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const id = searchParams.get("id");
 
-  console.log("PredictionId", id);
   if (id) {
     try {
       const response = await fetch(

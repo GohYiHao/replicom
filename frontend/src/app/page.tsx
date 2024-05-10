@@ -22,6 +22,7 @@ const Page = () => {
   const [filteredModules, setFilteredModules] = useState<any[]>([]);
   const [headModules, setHeadModules] = useState<any[]>([]);
   const [collectionModules, setCollectionModules] = useState<ModelListCollectionType[]>([]);
+
   const { setPrediction, searchString, setSearchString } =
     usePredictionContext();
 
@@ -76,7 +77,7 @@ const Page = () => {
   };
 
   const { theme } = useTheme();
-  console.log(collectionModules, "list collection")
+
   return (
     <>
       <main className="mt-[88px] h-full w-full bg-[url(/img/dots-bg.svg)] dark:bg-[url(/img/dot-bg-dark.svg)] px-[40px] ">

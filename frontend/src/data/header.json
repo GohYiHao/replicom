@@ -14,18 +14,18 @@
         "github_url": "https://github.com/replicate/cog-stable-diffusion"
     },
     {
-        "image_url": "https://tjzk.replicate.delivery/models_models_featured_image/779f3f58-c3db-4403-a01b-3ffed97a1449/out-0-1.jpg",
-        "name": "sdxl-lightning-4step",
-        "owner": "bytedance",
+        "image_url": "https://tjzk.replicate.delivery/models_models_featured_image/3c39b440-084c-45a9-bd55-6ad35abdf0b4/material-transfer.webp",
+        "name": "material-transfer",
+        "owner": "iordcalin",
         "description": "SDXL-Lightning by ByteDance: a fast text-to-image model that makes high-quality images in 4 steps",
         "category": "replicate",
-        "url": "https://replicate.com/bytedance/sdxl-lightning-4step",
+        "url": "https://replicate.com/iordcalin/material-transfer",
         "key": 2,
         "id": 2,
         "colorfrom": null,
         "colorto": null,
         "likes": "23",
-        "github_url": "https://github.com/lucataco/cog-sdxl-lightning-4step"
+        "github_url": "https://github.com/iordcalin/material-transfer"
     },
     {
         "image_url": "https://replicate.delivery/mgxm/59d9390c-b415-47e0-a907-f81b0d9920f1/187400315-87a90ac9-d231-45d6-b377-38702bd1838f.jpg",

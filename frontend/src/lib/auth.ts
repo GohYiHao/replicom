@@ -22,7 +22,7 @@ async function authorizeCrypto(
   const user = await axios.get(
     `${process.env.NEXT_PUBLIC_SERVER_URL}/api/registeruser/?walletAddress=${walletAddress}`
   );
-  // console.log(user, "user")
+
   if (!user.data[0]?.walletAddress) return null;
 
   const verifyNonce = "Welcome to sign in Repliate.com!";
@@ -65,7 +65,7 @@ async function authorizePolkadot(
 
     // Verify the message was not compromised
     if (messaageJSON.nonce !== credentials.csrfToken) {
-      console.log("CSRF", credentials.csrfToken);
+
       return Promise.reject(
         new Error("🚫 You shall not pass! - CSRF token mismatch")
       );

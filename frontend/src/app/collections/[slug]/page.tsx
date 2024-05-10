@@ -17,7 +17,6 @@ export default function ModelCollectionList() {
         );
         const orderedModels = [...response.data.models].sort((a, b) => b.run_count - a.run_count);
         setDisplayedModules(orderedModels)
-        console.log(response.data.models, "slug");
     }
 
     useEffect(() => {

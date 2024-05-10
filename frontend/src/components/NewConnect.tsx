@@ -97,8 +97,6 @@ export default function Connect({ signInWithCrypto }: ConnectWalletProps) {
 
     if (!selectedAccount) return;
 
-    console.log("IS WEB3 INJECTED", isWeb3Injected);
-
     localStorage.setItem("connectedAccount", JSON.stringify(selectedAccount));
 
     // setConnectedAccount(selectedAccount);
@@ -137,7 +135,6 @@ export default function Connect({ signInWithCrypto }: ConnectWalletProps) {
         };
 
         localStorage.setItem("userData", JSON.stringify(currentUser));
-        console.log(currentUser);
 
         // await cryptoWaitReady();
         await handleLogin({
@@ -163,7 +160,6 @@ export default function Connect({ signInWithCrypto }: ConnectWalletProps) {
       address: account?.address,
     });
 
-    console.log("RESULT URL", result?.url);
 
     if (result?.url) {
       router.push(result.url);
@@ -245,7 +241,7 @@ export default function Connect({ signInWithCrypto }: ConnectWalletProps) {
       )}
 
       <Dialog open={showModal} onOpenChange={setShowModal}>
-        <DialogContent className="bg-[#131B2A] text-white">
+        <DialogContent className="bg-[#131B2A] text-white ">
           <DialogTitle className="text-xl font-bold">
             Connect Wallet
             <p className="text-[15px] text-gray-500 font-sans pb-[20px]">
@@ -291,28 +287,22 @@ export default function Connect({ signInWithCrypto }: ConnectWalletProps) {
 
       <Dialog open={showAccountsModal} onOpenChange={setShowAccountsModal}>
         <DialogContent className="bg-white text-black dark:bg-[#131B2A] dark:text-white">
-          <DialogTitle className="flex gap-2 items-center mb-6 font-bold text-2xl">
-            <Image
-              src="/img/polkadot.png"
-              alt="Polkadot"
-              width={32}
-              height={32}
-            />
+          <div className="flex gap-2 items-center mb-6 font-bold text-2xl">
+            <Image src="/img/polkadot.png" alt="Polkadot" width={32} height={32} />
             Select Wallet
-          </DialogTitle>
+          </div>
           <div className="space-y-4">
             {polkadotAccounts.map((account, index) => (
               <div
                 key={index}
-                className={`p-3 cursor-pointer border-2 rounded-lg ${
-                  selectedAccount?.address === account.address
-                    ? "border-green-500"
-                    : "border-black dark:border-white"
-                }`}
+                className={`p-3 cursor-pointer border-2 rounded-lg max-w-full  ${selectedAccount?.address === account.address
+                  ? "border-green-500"
+                  : "border-black dark:border-white"
+                  }`}
                 onClick={() => setSelectedAccount(account)}
               >
                 <p className="font-bold text-lg">{account.meta.name}</p>
-                <p className="text-lg">{account.address}</p>
+                <p style={{ wordBreak: 'break-all' }} className="max-w-full break-words">{account.address}</p>
               </div>
             ))}
             <Button

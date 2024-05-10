@@ -54,9 +54,6 @@ const DynamicForms: React.FC<DynamicFormProps> = ({
 
   const [formData, setFormData] = useState<FormData>(initialFormData);
 
-  console.log("SCHEMA", schema.Input);
-  console.log("FORM DATA", formData);
-
   // const [predictions, setPrediction] = useState(null);
   const [error, setError] = useState(null);
   const [selectedFiles, setSelectedFiles] = useState<{ [key: string]: string }>(
@@ -197,8 +194,6 @@ const DynamicForms: React.FC<DynamicFormProps> = ({
 
     const requestBody = { version, input: sanitizedFormData };
 
-    console.log("SANITIZED INPUT", sanitizedFormData);
-    console.log("SCHEMA", schema.Input);
 
     try {
       const response = await fetch("/api/output", {

@@ -8,7 +8,6 @@ export async function GET(request: NextRequest) {
     // Extract owner and name from the query parameters
     const searchParams = request.nextUrl.searchParams;
     const slug = searchParams.get("slug");
-    console.log(slug, "-----------------slug---------------")
     // Check if owner and name are provided
     if (!slug) {
         return new NextResponse(

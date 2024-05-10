@@ -53,10 +53,10 @@ export default function LatestModelItem({
           )}
         </div>
         <div className="p-[12px] w-[calc(100%-168px)]">
-          <h4 className="   font-bold text-gray-800 text-[24px] dark:text-white">
+          <h4 className=" truncate  font-bold text-gray-800 text-[24px] dark:text-white">
             {owner}/{name}
           </h4>
-          <p className="dark:text-white text-black mt-[15px]">
+          <p className="dark:text-white text-black mt-[15px] ">
             {description}
           </p>
         </div>

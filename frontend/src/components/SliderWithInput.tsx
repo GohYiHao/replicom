@@ -33,7 +33,6 @@ const SliderWithInput = ({
     onValueChange(inputKey, newValue);
   };
 
-  // console.log(defaultValue);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = parseInt(e.target.value, 10);

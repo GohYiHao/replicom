@@ -73,7 +73,7 @@ export default function ModelDetails() {
     usePredictionContext();
 
   const [isCanceling, setIsCanceling] = useState(false);
-  // console.log("MODEL DETAILS", modelDetails);
+
 
   useEffect(() => {
     if (owner && name) {
@@ -154,7 +154,6 @@ export default function ModelDetails() {
   // Check if the output is a URL or structured data
 
   const renderOutput = (output: any) => {
-    console.log("OUTPUT INSIDE RENDER OUTPUT FUNCTION", output);
 
     if (Array.isArray(output)) {
       if (
@@ -238,7 +237,6 @@ export default function ModelDetails() {
     }
   };
 
-  console.log("", prediction);
 
   return (
     <Suspense fallback={<div className="mt-20">Loading...</div>}>

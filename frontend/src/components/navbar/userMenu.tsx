@@ -74,9 +74,7 @@ const UserMenu = () => {
     }
   }
 
-  useEffect(() => {
-    console.log("component reupdates");
-  }, []);
+
 
   return (
     <>

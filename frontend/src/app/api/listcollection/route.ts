@@ -11,10 +11,10 @@ export async function GET(request: NextRequest) {
                 "Content-Type": "application/json",
             },
         });
-        console.log(response);
+
         return new NextResponse(JSON.stringify(response.data));
     } catch (error) {
-        console.error(error);
+
         return new NextResponse(
             JSON.stringify({ error: "Failed to fetch models" }),
             {
