@@ -34,14 +34,14 @@ Run AI with an API. Run and fine-tune open-source models.  All with one line of 
 
 6. for build
    ```bash
-       npm run build
+    npm run build
 
 
 ## Backend
 ### Installation
    ```bash
     cd backend
-
+   ```
    ```bash
     pip install -r requirements.txt
 
