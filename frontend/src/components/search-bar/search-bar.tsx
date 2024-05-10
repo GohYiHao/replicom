@@ -21,6 +21,12 @@ const SearchBar: React.FC<SearchBarProps> = ({
     router.push(`/search?query=${searchString}`)
   }
 
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      search();
+    }
+  };
+
   return (
     <section
       className={classNames(
@@ -36,6 +42,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
           )}
           value={searchString}
           onChange={({ target: { value } }) => setSearchString(value)}
+          onKeyPress={handleKeyPress}
           placeholder="Search for module"
         />
         <IoIosSearch className="text-black w-[25px] h-[25px] dark:text-white dark:bg-gray-800 hover:cursor-pointer" onClick={search} />
