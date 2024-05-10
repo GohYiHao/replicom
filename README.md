@@ -62,3 +62,6 @@ Run AI with an API. Run and fine-tune open-source models.  All with one line of 
    ```
 # How to run
 ![image](https://github.com/GohYiHao/replicom/assets/153108882/0bc7cf5f-21d1-4db9-b376-4f3d1d0d0909)
+![image](https://github.com/GohYiHao/replicom/assets/153108882/c4c838f3-e25e-4083-9c1d-7effbecfcc0d)
+![image](https://github.com/GohYiHao/replicom/assets/153108882/85a2f439-9795-4aac-9480-85f5412dcdfd)
+
