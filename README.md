@@ -32,25 +32,29 @@ Run AI with an API. Run and fine-tune open-source models.  All with one line of 
     ```bash
     npm run dev
 
-For build
-```
-    npm run build
-```
+6. for build
+   ```bash
+       npm run build
 
 
 ## Backend
+### Installation
    ```bash
     cd backend
 
    ```bash
     pip install -r requirements.txt
 
-   ```bash
+
+   Set the env.file
+   ```      
     ENGINE=<Your postgreSQL engine>
     NAME=<Your postgreSQL name>
     USER=<Your postgreSQL user>
     PASSWORD=<Your postgreSQL password>
     Authorization=<Your replicate.com api token>
+   ```
+    
 
     ```bash
     python manage.py run server
